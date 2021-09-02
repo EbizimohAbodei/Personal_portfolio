@@ -35,9 +35,9 @@ navLinks.forEach(link => {
 
 /* ========= Modal Handling =============== */
 
-var modal_one = document.getElementById("modal_one");
-var modal_two = document.getElementById("modal_two");
-var modal_three = document.getElementById("modal_three");
+var modalOne = document.getElementById("modal_one");
+var modalTwo = document.getElementById("modal_two");
+var modalThree = document.getElementById("modal_three");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("services_button_one");
@@ -45,37 +45,62 @@ var btn2 = document.getElementById("services_button_two");
 var btn3 = document.getElementById("services_button_three");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("services_modal_close")[0];
+var closeButtonList = document.getElementsByClassName("services_modal_close");
 
 // When the user clicks on the button, open the modal
 btn1.onclick = function() {
-    modal_one.style.display = "block";
+    modalOne.style.display = "block";
 }
 btn2.onclick = function() {
-    modal_two.style.display = "block";
+    modalTwo.style.display = "block";
 }
 btn3.onclick = function() {
-    modal_three.style.display = "block";
+    modalThree.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal_one.style.display = "none"; 
+closeButtonList.onclick = function() {
+   
 }
 
+Array.from(closeButtonList).forEach(element => {
+    console.log(element)
+    element.onclick = function() {
+        if 
+        (
+            modalOne.style.display === 'block') {
+            modalOne.style.display = "none"
+        } 
+        else if
+        (modalTwo.style.display === 'block') {
+            modal_two.style.display = "none"
+        }
+        else 
+        {
+            modalThree.style.display = "none"
+        }
+    }
+});
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal_one) {
-    modal_one.style.display = "none";
-  } 
-  else if (event.target == modal_two)
-  {
-    modal_two.style.display = "none"
-  } 
-  else 
-  {
-    modal_three.style.display = "none"
-  }
-}
+
+if (modalOne.style.display === 'block') 
+{ 
+    window.onclick = function() {
+        modalOne.style.display = "none"
+    }
+    
+} 
+
+// Kenny MeSt23:12
+// [btn1, btn2, btn3].forEach
+// Kenny MeSt23:16
+// const modalList = [modalOne, modalTwo, modalThree]
+// const btnList = [btn1, btn2, bt3]
+// Kenny MeSt23:18
+// btnList.forEach((btn, index) => {
+//   btn.onClick = () => {
+//     modalList[index].style.display = "block"
+//   }
+// }
 

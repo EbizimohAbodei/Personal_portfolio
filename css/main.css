@@ -455,6 +455,7 @@ progress::-webkit-progress-value {
   background-color: transparent;
   border-radius: 2px;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .services_button_one:hover,
@@ -466,7 +467,7 @@ progress::-webkit-progress-value {
 .services_content{
   position: relative;
   background-color:rgb(3, 155, 155);
-  padding: 2rem 2rem 4rem 1rem;
+  padding: 6rem 6rem 8rem 4rem;
   border-radius: .25rem;
   box-shadow: 0 2px 4px rgb(3, 155, 155);
   transition: .2s;
@@ -477,7 +478,7 @@ progress::-webkit-progress-value {
 }
 
 .services.title{
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 3px;
   margin: 5px;
   padding: 5px;
@@ -485,7 +486,7 @@ progress::-webkit-progress-value {
 
 .services_icon{
   display: block;
-  font-size: 1rem;
+  font-size: 8rem;
   color: rgb(3, 155, 155);
 }
 
@@ -496,6 +497,7 @@ progress::-webkit-progress-value {
 
 .services_modal_title{
   font-size: 22px;
+  margin-bottom: 1rem;
 }
 
 
